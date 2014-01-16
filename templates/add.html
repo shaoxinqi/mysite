@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/accounts/add/" method="post">
+    {% csrf_token %}
+    <p>员工编号：<input type="text" name="userid" value="" id="userid"></p>
+    <p>员工姓名：<input type="text" name="name" value="" id="name"></p>
+    <input type="submit" value="登记">
+</form>
+	<p><a href="/accounts/loggedin/">Back</a></p>
+
+{% endblock %}
